@@ -47,3 +47,11 @@ Update title and description:
 ```shell
 curl --header "Content-Type: application/json" --request PUT --data '{"id":19,"name":"New Café (UBT)","description":"My description","type":"CAFE","campus":"MAIN","street":"Teststraße","houseNumber":"99","postalCode":12345,"city":"Bayreuth"}%' http://localhost:8080/api/pos/19 # set correct task id here and in the body
 ```
+## REST API Test (curl)
+
+### POST Request:
+```bash
+curl -X POST http://localhost:8080/api/pos \
+  -H "Content-Type: application/json" \
+  -d '{"name": "Stadtbäckerei Schaller GmbH","address": "Maximilianstraße 18, 95444 Bayreuth","city": "Bayreuth","state": "Bavaria","postalCode": "95444","country": "Germany"}'
+
